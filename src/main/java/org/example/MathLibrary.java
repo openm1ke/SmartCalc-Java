@@ -7,9 +7,9 @@ import com.sun.jna.Pointer;
 public interface MathLibrary extends Library {
     MathLibrary INSTANCE = (MathLibrary) Native.load("math_library", MathLibrary.class);
 
-    // Функция для вычисления квадрата и корня числа
-    Pointer calculate_square_and_sqrt(double number);
+    Pointer create_model();
+    void destroy_model(Pointer model);
+    void set_expression(Pointer model, String expression);
 
-    // Функция для освобождения памяти
-    void free_memory(Pointer array);
+    String calculate(Pointer model);
 }
