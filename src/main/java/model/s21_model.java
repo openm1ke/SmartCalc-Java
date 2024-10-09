@@ -1,11 +1,11 @@
-package org.example;
+package model;
 
 import com.sun.jna.Library;
 import com.sun.jna.Native;
 import com.sun.jna.Pointer;
 
-public interface MathLibrary extends Library {
-    MathLibrary INSTANCE = (MathLibrary) Native.load("math_library", MathLibrary.class);
+public interface s21_model extends Library {
+    s21_model INSTANCE = (s21_model) Native.load("math_library", s21_model.class);
 
     Pointer create_model();
     void destroy_model(Pointer model);
