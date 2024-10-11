@@ -7,6 +7,7 @@
 #include <sstream>
 #include <stack>
 #include <string>
+#include <cstring>
 // NOLINTNEXTLINE(build/c++11)
 #include <regex>
 #define S21_EPSILON 0.0000001
