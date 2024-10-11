@@ -20,8 +20,42 @@
 - Обработка событий: Пользовательский ввод обрабатывается в модели представления, которая вызывает соответствующие методы из C++ библиотеки для выполнения расчетов.
 - Отображение результатов: Результаты вычислений отображаются в интерфейсе пользователя.
 
-#### Запуск
+#### Пересобрать библиотеку
+
+В папке src/main/cpp запустить сборку
+```bash
+make
+```
+
+под Windows скачать и установить MinGW
+
+https://github.com/niXman/mingw-builds-binaries/releases
+
+```cmd
+minigw32-make -f Makefile
+```
+
+#### Запуск под Linux
 
 ```bash
 mvn clean install
+```
+
+#### Сборка под Windows
+
+Скачать и установить JDK 17
+
+https://www.oracle.com/java/technologies/downloads/?er=221886#jdk17-windows
+
+В path установлена переменная JAVA_HOME
+
+Скачать и установить Maven и добавить переменную MAVEN_HOME для пути и указать этот путь в PATH
+```
+MAVEN_HOME C:\apache-maven-3.9.9-bin
+%MAVEN_HOME%\bin
+```
+Запуск с указанием пути до библиотеки:
+
+```cmd
+java -jar target/SmartCalcModel-1.0-SNAPSHOT.jar
 ```
